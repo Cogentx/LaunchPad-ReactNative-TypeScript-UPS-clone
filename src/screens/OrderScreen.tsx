@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTailwind } from 'tailwind-rn/dist';
+
+const tw = useTailwind();
 
 const OrderScreen = () => {
   return (
-    <View>
+    <SafeAreaView style={tw('text-red-500')}>
       <Text>OrderScreen</Text>
-    </View>
-  )
-}
+    </SafeAreaView>
+  );
+};
 
-export default OrderScreen
+export default OrderScreen;
