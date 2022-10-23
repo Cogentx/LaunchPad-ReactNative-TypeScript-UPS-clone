@@ -6,21 +6,22 @@
   width: 100%
 }
 
-.flex-1 {
-  flex: 1 1 0%
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.items-center {
-  align-items: center
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem
 }
 
-.justify-center {
-  justify-content: center
+.pt-5 {
+  padding-top: 1.25rem
 }
 
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity))
+.pb-0 {
+  padding-bottom: 0px
 }
 
 .text-red-500 {
