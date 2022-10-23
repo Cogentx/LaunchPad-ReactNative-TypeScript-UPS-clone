@@ -1,6 +1,13 @@
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity))
+.flex-1 {
+  flex: 1 1 0%
+}
+
+.items-center {
+  align-items: center
+}
+
+.justify-center {
+  justify-content: center
 }
 
 .text-blue-500 {

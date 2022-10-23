@@ -6,7 +6,7 @@ const CustomerScreen = () => {
   const tw = useTailwind();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={tw("flex-1 items-center justify-center")}>
       <Text style={tw("text-blue-500")}>Legato</Text>
     </SafeAreaView>
   );
