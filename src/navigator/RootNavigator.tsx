@@ -2,15 +2,16 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabNavigator from './TabNavigator';
 
+// set to an object for passing props ({userId: string})
 export type RootStackParamList = {
   Main: undefined;
   Modal: { userId: string; name: string };
   Order: { order: any };
 };
 
-const RootNavigator = () => {
-  const RootStack = createNativeStackNavigator<RootStackParamList>();
+const RootStack = createNativeStackNavigator<RootStackParamList>();
 
+const RootNavigator = () => {
   return (
     <RootStack.Navigator>
       <RootStack.Group>
