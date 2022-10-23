@@ -3,9 +3,11 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTailwind } from 'tailwind-rn/dist';
 
-const tw = useTailwind();
 
 const OrderScreen = () => {
+
+  const tw = useTailwind();
+  
   return (
     <SafeAreaView style={tw('text-red-500')}>
       <Text>OrderScreen</Text>
