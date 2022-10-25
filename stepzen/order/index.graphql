@@ -1,0 +1,36 @@
+# NOTES
+# - TrackingItems - type inside trackingItems graphql
+# - trackingId - passed to stepzen materializer from type Order inside this graphql
+# - trackingItems - is a field we create to link to TrackingItems; it does not actually exist on Order endpoint
+# - getTrackingItemById - is query inside TrackingItems endpoint
+# - arguments - passed to getTrackingItemById query function
+# --- [{name: "id"}] where name is the name of the parameter being passed to getTrackingItemById
+# --- [{field: "trackingId"}] where field refers to the trackingId field on the Order endpoint as defined on type Order in this file
+
+type Order {
+  Address: String
+  City: String
+  Lat: Float
+  Lng: Float
+  carrier: String
+  createdAt: Date
+  shippingCost: Int
+  trackingId: String
+  trackingItems: TrackingItems
+    @materializer(query: "getTrackingItemById", arguments: [{ name: "id", field: "trackingId" }])
+}
+
+type OrderList {
+  name: ID
+  value: Order
+}
+
+type Query {
+  getOrderById(id: ID!): Order @rest(endpoint: "https://portfolio-clones.firebaseio.com/order/$id.json")
+
+  getOrders: [OrderList]
+    @rest(
+      endpoint: "https://portfolio-clones.firebaseio.com/orders.json"
+      transforms: [{ pathpattern: [], editor: "objectToArray" }]
+    )
+}
