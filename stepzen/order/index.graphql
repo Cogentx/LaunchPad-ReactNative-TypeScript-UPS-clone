@@ -1,4 +1,5 @@
 # NOTES
+# StepZen is the INTERFACE between the frontend and the backend
 # - TrackingItems - type inside trackingItems graphql
 # - trackingId - passed to stepzen materializer from type Order inside this graphql
 # - trackingItems - is a field we create to link to TrackingItems; it does not actually exist on Order endpoint
